@@ -24,8 +24,8 @@ window.webcam = {
 	ie: !!navigator.userAgent.match(/MSIE/),
 	protocol: location.protocol.match(/https/i) ? 'https' : 'http',
 	callback: null, // user callback for completed uploads
-	swf_url: '/site_media/jpegcam/webcam.swf', // URI to webcam.swf movie (defaults to cwd)
-	shutter_url: '/site_media/jpegcam/shutter.mp3', // URI to shutter.mp3 sound
+	swf_url: '../site_media/jpegcam/webcam.swf', // URI to webcam.swf movie (defaults to cwd)
+	shutter_url: '../site_media/jpegcam/shutter.mp3', // URI to shutter.mp3 sound
 	api_url: '', // URL to upload script
 	loaded: false, // true when webcam movie finishes loading
 	quality: 90, // JPEG quality (1 - 100)
@@ -163,7 +163,7 @@ window.webcam = {
 		// enable or disable the shutter sound effect
 		// defaults to enabled
 		this.shutter_sound = enabled;
-		this.shutter_url = url ? url : 'site_media/jpegcam/shutter.mp3';
+		this.shutter_url = url ? url : '../site_media/jpegcam/shutter.mp3';
 	},
 	
 	flash_notify: function(type, msg) {

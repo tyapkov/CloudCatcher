@@ -1,6 +1,7 @@
 from django.template import Context, loader
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.conf import settings
 
 def index(request):
     t = loader.get_template('catcher/index.html')
@@ -16,6 +17,6 @@ def save_image(request):
         f.write(request.raw_post_data)
         f.close()
         # return the URL
-        return HttpResponse('http://localhost:8080/site_media/webcamimages/someimage.jpg')
+        return HttpResponse('http://localhost:8000/site_media/webcamimages/someimage.jpg')
     else:
         return HttpResponse('no data')

@@ -7,19 +7,9 @@ from django.conf import settings
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^catcher/$', 'catcher.views.index')
-    
-
-    # Example:
-    # (r'^CloudCatcher/', include('CloudCatcher.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
-)
+    (r'^catcher/$', 'catcher.views.index'),
+    (r'^save_image/$', 'catcher.views.save_image')  
+) 
 
 if settings.DEBUG:
     urlpatterns += patterns('',
